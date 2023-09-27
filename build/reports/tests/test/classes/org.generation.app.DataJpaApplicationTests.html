@@ -79,7 +79,7 @@
 <a name="contextLoads()"></a>
 <h3 class="failures">contextLoads()</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1eddca25 testClass = org.generation.app.DataJpaApplicationTests, locations = [], classes = [org.generation.app.DataJpaApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4535b6d5, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@22ffa91a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5b619d14, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@31d0e481, org.springframework.boot.test.context.SpringBootTestAnnotation@3a95c78e], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@767b9d66 testClass = org.generation.app.DataJpaApplicationTests, locations = [], classes = [org.generation.app.DataJpaApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@232a7d73, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@40844aab, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7f36662c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@542e560f, org.springframework.boot.test.context.SpringBootTestAnnotation@7eb5567], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -253,8 +253,8 @@ Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to no
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:39:18.862 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.generation.app.DataJpaApplicationTests]: DataJpaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-20:39:18.946 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.generation.app.DataJpaApplication for test class org.generation.app.DataJpaApplicationTests
+<pre>20:51:08.937 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.generation.app.DataJpaApplicationTests]: DataJpaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:51:09.020 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.generation.app.DataJpaApplication for test class org.generation.app.DataJpaApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -264,18 +264,18 @@ Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to no
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-09-26T20:39:19.360-06:00  INFO 9276 --- [    Test worker] o.g.app.DataJpaApplicationTests          : Starting DataJpaApplicationTests using Java 20.0.2 with PID 9276 (started by darks in C:\Users\darks\generation\java\DataJPA)
-2023-09-26T20:39:19.362-06:00  INFO 9276 --- [    Test worker] o.g.app.DataJpaApplicationTests          : The following 1 profile is active: &quot;render&quot;
-2023-09-26T20:39:19.954-06:00  INFO 9276 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-26T20:39:20.012-06:00  INFO 9276 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
-2023-09-26T20:39:20.403-06:00  INFO 9276 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-26T20:39:20.448-06:00  INFO 9276 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
-2023-09-26T20:39:20.450-06:00  INFO 9276 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-09-26T20:39:20.572-06:00  INFO 9276 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-26T20:39:20.689-06:00  INFO 9276 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-09-26T20:39:20.703-06:00  INFO 9276 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-26T20:39:20.715-06:00  WARN 9276 --- [    Test worker] org.postgresql.util.PGPropertyUtil       : JDBC URL invalid port number: ${SQLPORT}
-2023-09-26T20:39:20.715-06:00  WARN 9276 --- [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-09-26T20:51:09.380-06:00  INFO 12276 --- [    Test worker] o.g.app.DataJpaApplicationTests          : Starting DataJpaApplicationTests using Java 20.0.2 with PID 12276 (started by darks in C:\Users\darks\generation\java\DataJPA)
+2023-09-26T20:51:09.383-06:00  INFO 12276 --- [    Test worker] o.g.app.DataJpaApplicationTests          : The following 1 profile is active: &quot;render&quot;
+2023-09-26T20:51:09.924-06:00  INFO 12276 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26T20:51:09.979-06:00  INFO 12276 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-09-26T20:51:10.318-06:00  INFO 12276 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26T20:51:10.367-06:00  INFO 12276 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-26T20:51:10.370-06:00  INFO 12276 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-26T20:51:10.494-06:00  INFO 12276 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-26T20:51:10.611-06:00  INFO 12276 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-26T20:51:10.626-06:00  INFO 12276 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-26T20:51:10.638-06:00  WARN 12276 --- [    Test worker] org.postgresql.util.PGPropertyUtil       : JDBC URL invalid port number: ${SQLPORT}
+2023-09-26T20:51:10.639-06:00  WARN 12276 --- [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
 	at com.zaxxer.hikari.util.DriverDataSource.&lt;init&gt;(DriverDataSource.java:110) ~[HikariCP-5.0.1.jar:na]
@@ -410,19 +410,19 @@ java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jd
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
 
-2023-09-26T20:39:20.969-06:00  INFO 9276 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-09-26T20:39:21.541-06:00  INFO 9276 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-26T20:39:21.557-06:00 DEBUG 9276 --- [    Test worker] org.hibernate.SQL                        : 
+2023-09-26T20:51:10.893-06:00  INFO 12276 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-26T20:51:11.447-06:00  INFO 12276 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26T20:51:11.460-06:00 DEBUG 12276 --- [    Test worker] org.hibernate.SQL                        : 
     alter table if exists orders_products 
        drop constraint if exists FKkd5bwup2chstpn2lmghukkhsi
-2023-09-26T20:39:21.557-06:00  INFO 9276 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-09-26T20:39:21.557-06:00  WARN 9276 --- [    Test worker] org.postgresql.util.PGPropertyUtil       : JDBC URL invalid port number: ${SQLPORT}
-2023-09-26T20:39:21.561-06:00 ERROR 9276 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
-2023-09-26T20:39:21.561-06:00  WARN 9276 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
-2023-09-26T20:39:21.569-06:00  INFO 9276 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+2023-09-26T20:51:11.461-06:00  INFO 12276 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-26T20:51:11.461-06:00  WARN 12276 --- [    Test worker] org.postgresql.util.PGPropertyUtil       : JDBC URL invalid port number: ${SQLPORT}
+2023-09-26T20:51:11.463-06:00 ERROR 12276 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
+2023-09-26T20:51:11.464-06:00  WARN 12276 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
+2023-09-26T20:51:11.470-06:00  INFO 12276 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-09-26T20:39:21.589-06:00 ERROR 9276 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2023-09-26T20:51:11.486-06:00 ERROR 12276 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, jdbc:postgresql://${SQLHOST}:${SQLPORT}/${SQLDATABASE}
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
@@ -572,9 +572,9 @@ Caused by: java.lang.RuntimeException: Driver org.postgresql.Driver claims to no
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
 	... 109 common frames omitted
 
-2023-09-26T20:39:21.599-06:00 ERROR 9276 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [org.generation.app.DataJpaApplicationTests@22f057b4]
+2023-09-26T20:51:11.497-06:00 ERROR 12276 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [org.generation.app.DataJpaApplicationTests@687fd6e]
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1eddca25 testClass = org.generation.app.DataJpaApplicationTests, locations = [], classes = [org.generation.app.DataJpaApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4535b6d5, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@22ffa91a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5b619d14, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@31d0e481, org.springframework.boot.test.context.SpringBootTestAnnotation@3a95c78e], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@767b9d66 testClass = org.generation.app.DataJpaApplicationTests, locations = [], classes = [org.generation.app.DataJpaApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@232a7d73, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@40844aab, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7f36662c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@542e560f, org.springframework.boot.test.context.SpringBootTestAnnotation@7eb5567], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.11.jar:6.0.11]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.11.jar:6.0.11]
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.0.11.jar:6.0.11]
@@ -775,7 +775,7 @@ Unconditional classes:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2.1</a> at Sep 26, 2023, 8:39:21 PM</p>
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at Sep 26, 2023, 8:51:11 PM</p>
 </div>
 </div>
 </body>
