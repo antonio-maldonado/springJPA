@@ -1,6 +1,7 @@
 package org.generation.app.entity;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
